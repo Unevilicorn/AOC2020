@@ -1,5 +1,10 @@
-testFileName = "actualInput.txt"
-testInput = open(testFileName).readlines()
+import os
+
+__location__ = os.path.realpath(os.path.join(
+    os.getcwd(), os.path.dirname(__file__)))
+
+testFileName = "inputs.txt"
+testInput = open(os.path.join(__location__, testFileName)).readlines()
 
 intInput = list(map(int, testInput))
 
