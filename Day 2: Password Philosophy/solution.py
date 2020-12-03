@@ -3,7 +3,7 @@ __location__ = os.path.realpath(os.path.join(
     os.getcwd(), os.path.dirname(__file__)))
 
 testFileName = "inputs.txt"
-testInput = open(os.path.join(__location__, testFileName)).readlines()
+inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
 
 def parseLine(line):
@@ -36,7 +36,7 @@ def checkPosition(line):
 
 
 def countValid(func):
-    return sum(map(func, testInput))
+    return sum(map(func, inputLines))
 
 
 print(countValid(checkOccurence))

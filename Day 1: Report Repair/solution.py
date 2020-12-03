@@ -4,9 +4,9 @@ __location__ = os.path.realpath(os.path.join(
     os.getcwd(), os.path.dirname(__file__)))
 
 testFileName = "inputs.txt"
-testInput = open(os.path.join(__location__, testFileName)).readlines()
+inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
-intInput = list(map(int, testInput))
+intInput = list(map(int, inputLines))
 
 finalTarget = 2020
 
