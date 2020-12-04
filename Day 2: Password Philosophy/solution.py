@@ -2,7 +2,7 @@ import os
 __location__ = os.path.realpath(os.path.join(
     os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "inputs.txt"
+testFileName = "input.txt"
 inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
 
@@ -39,5 +39,5 @@ def countValid(func):
     return sum(map(func, inputLines))
 
 
-print(countValid(checkOccurence))
-print(countValid(checkPosition))
+print(countValid(checkOccurence))  # 398
+print(countValid(checkPosition))  # 562

@@ -4,7 +4,7 @@ import os
 __location__ = os.path.realpath(os.path.join(
     os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "inputs.txt"
+testFileName = "input.txt"
 inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
 
@@ -28,5 +28,5 @@ def multiplyTree():
     return reduce(mul, map(treeCount, slopes))
 
 
-print(treeCount())
-print(multiplyTree())
+print(treeCount())  # 278
+print(multiplyTree())  # 9709761600

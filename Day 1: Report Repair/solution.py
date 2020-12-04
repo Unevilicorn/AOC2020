@@ -3,7 +3,7 @@ import os
 __location__ = os.path.realpath(os.path.join(
     os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "inputs.txt"
+testFileName = "input.txt"
 inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
 intInput = list(map(int, inputLines))
@@ -44,7 +44,7 @@ def threeEntryHash(target=finalTarget, inputs=intInput):
             return tr * n1
 
 
-print(twoEntry())
-print(twoEntryHash())
-print(threeEntry())
-print(threeEntryHash())
+print(twoEntry())  # 888331
+print(twoEntryHash())  # 888331
+print(threeEntry())  # 130933530
+print(threeEntryHash())  # 130933530
