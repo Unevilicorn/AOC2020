@@ -1,15 +1,21 @@
 from operator import mul
 from functools import reduce
 import os
-__location__ = os.path.realpath(os.path.join(
-    os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "input.txt"
-inputLines = open(os.path.join(__location__, testFileName)).readlines()
+
+def loadInput(fileName):
+    __location__ = os.path.realpath(os.path.join(
+        os.getcwd(), os.path.dirname(__file__)))
+    with open(os.path.join(__location__, fileName)) as file:
+        return file.read().splitlines()
+
+
+testfileName = "input.txt"
+inputLines = loadInput(testfileName)
 
 
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
-mapWidth = len(inputLines[0]) - 1
+mapWidth = len(inputLines[0])
 
 
 def treeCount(slope=(3, 1)):

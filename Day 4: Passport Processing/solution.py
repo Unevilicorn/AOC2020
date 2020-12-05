@@ -1,13 +1,16 @@
-from operator import mul
-from functools import reduce
 import os
-__location__ = os.path.realpath(os.path.join(
-    os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "input.txt"
-inputLines = open(os.path.join(__location__, testFileName)).readlines()
 
-inputLines += ["\n"]
+def loadInput(fileName):
+    __location__ = os.path.realpath(os.path.join(
+        os.getcwd(), os.path.dirname(__file__)))
+    with open(os.path.join(__location__, fileName)) as file:
+        return file.read().splitlines()
+
+
+testfileName = "input.txt"
+inputLines = loadInput(testfileName) + [""]
+
 
 requiredFields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 hexChar = "0123456789abcdef"
@@ -74,7 +77,6 @@ def validatePassport(validateFunction):
     passport = {}
     validCount = 0
     for line in inputLines:
-        line = line[:-1]
         if(not line == ""):
             lineSplit = map(lambda x: x.split(':'), line.split(' '))
             for splitLine in lineSplit:

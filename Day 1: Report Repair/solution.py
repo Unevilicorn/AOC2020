@@ -1,10 +1,15 @@
 import os
 
-__location__ = os.path.realpath(os.path.join(
-    os.getcwd(), os.path.dirname(__file__)))
 
-testFileName = "input.txt"
-inputLines = open(os.path.join(__location__, testFileName)).readlines()
+def loadInput(fileName):
+    __location__ = os.path.realpath(os.path.join(
+        os.getcwd(), os.path.dirname(__file__)))
+    with open(os.path.join(__location__, fileName)) as file:
+        return file.read().splitlines()
+
+
+testfileName = "input.txt"
+inputLines = loadInput(testfileName)
 
 intInput = list(map(int, inputLines))
 
