@@ -5,11 +5,11 @@ def loadInput(fileName):
     __location__ = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(__location__, fileName)) as file:
-        return file.read().splitlines()
+        return file.read()
 
 
 testfileName = "input.txt"
-inputLines = loadInput(testfileName)
+inputLines = loadInput(testfileName).splitlines()
 
 intInput = list(map(int, inputLines))
 

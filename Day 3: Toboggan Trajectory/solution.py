@@ -7,11 +7,11 @@ def loadInput(fileName):
     __location__ = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(__location__, fileName)) as file:
-        return file.read().splitlines()
+        return file.read()
 
 
 testfileName = "input.txt"
-inputLines = loadInput(testfileName)
+inputLines = loadInput(testfileName).splitlines()
 
 
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
