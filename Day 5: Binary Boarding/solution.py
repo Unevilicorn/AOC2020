@@ -29,8 +29,8 @@ def maxID():
 
 def misingID():
     possibleSeats = defaultdict(int)
-    seats = filter(lambda seat: (8 <= seat <= 1015),
-                   map(seatID, inputLines))
+    seats = map(seatID, inputLines)
+    seats = filter(lambda seat: (8 <= seat <= 1015), seats)
 
     for seat in seats:
         possibleSeats[seat] += 2
