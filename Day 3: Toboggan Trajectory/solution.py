@@ -3,15 +3,14 @@ from functools import reduce
 import os
 
 
-def loadInput(fileName):
+def loadInput(fileName="input.txt"):
     __location__ = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(__location__, fileName)) as file:
-        return file.read()
+        return file.read().splitlines()
 
 
-testfileName = "input.txt"
-inputLines = loadInput(testfileName).splitlines()
+inputLines = loadInput()
 
 
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]

@@ -2,15 +2,14 @@ import os
 from collections import defaultdict
 
 
-def loadInput(fileName):
+def loadInput(fileName="input.txt"):
     __location__ = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(__location__, fileName)) as file:
-        return file.read()
+        return file.read().splitlines()
 
 
-testfileName = "input.txt"
-inputLines = loadInput(testfileName).splitlines()
+inputLines = loadInput()
 
 lookUpTable = {"B": 1, "F": 0, "L": 0, "R": 1}
 

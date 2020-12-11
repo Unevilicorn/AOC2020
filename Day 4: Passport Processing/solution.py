@@ -1,15 +1,14 @@
 import os
 
 
-def loadInput(fileName):
+def loadInput(fileName="input.txt"):
     __location__ = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     with open(os.path.join(__location__, fileName)) as file:
-        return file.read()
+        return file.read().splitlines()
 
 
-testfileName = "input.txt"
-inputLines = loadInput(testfileName).splitlines() + [""]
+inputLines = loadInput() + [""]
 
 
 requiredFields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
