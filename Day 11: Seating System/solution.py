@@ -59,7 +59,7 @@ def getFilledCountFar(table, x, y):
     return total
 
 
-def evolveOne(table, filledCountFunc=getFilledCountFar,  dieCount=5):
+def evolveOne(table, filledCountFunc,  dieCount):
     newTab = []
     for (y, row) in enumerate(table):
         newTab.append([])
