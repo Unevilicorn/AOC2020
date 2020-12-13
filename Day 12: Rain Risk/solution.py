@@ -1,5 +1,4 @@
 import os
-from pprint import pprint
 
 
 def loadInput(fileName="input.txt"):
