@@ -1,2 +1,2 @@
 *.code-workspace
-**/test.txt
+**/test*.txt
