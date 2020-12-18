@@ -1,7 +1,5 @@
 import os
 import operator
-from itertools import combinations
-from pprint import pprint
 
 
 def loadInput(fileName="input.txt"):
