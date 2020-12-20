@@ -1,5 +1,4 @@
 import os
-import operator
 
 def loadInput(fileName="input.txt"):
     __location__ = os.path.realpath(os.path.join(
@@ -83,4 +82,4 @@ def countLoopyCorrect():
 
 parseRules()
 print(countCorrect()) # 182
-print(countLoopyCorrect()) # not 337
+print(countLoopyCorrect()) # 334
